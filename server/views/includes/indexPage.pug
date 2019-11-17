@@ -1,0 +1,33 @@
+script.
+  var player = null
+  $('.card-img-top').click(function () {
+    var video = $(this).data('video')
+    var image = $(this).attr('src')
+    $('#modal').modal('show')
+    if (!player) {
+      player = new DPlayer({
+        container: document.getElementById('videoModal'),
+        screenshot: true,
+        video: {
+          url: video,
+          pic: image,
+          thumbnails: image
+        }
+      })
+    } else {
+      if (palyer.video.currentSrc !== vedio) {
+        player.switchVideo({
+          url: video,
+          pic: image,
+          thumbnails: image
+        })
+      }
+    }
+  })
+
+  // 关闭弹窗
+  $('.closeModal').click(function () {
+    if (palyer && player.pause) {
+      player.pause()
+    }
+  })

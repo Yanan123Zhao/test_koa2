@@ -1,0 +1,26 @@
+{
+  "name": "test_koa2",
+  "version": "1.0.0",
+  "description": "use koa2 to finish douban film website",
+  "main": "server/index.js",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "koa": "^2.11.0",
+    "koa-views": "^6.2.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yanan123Zhao/test_koa2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yanan123Zhao/test_koa2/issues"
+  },
+  "homepage": "https://github.com/Yanan123Zhao/test_koa2#readme"
+}
