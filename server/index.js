@@ -1,7 +1,17 @@
 const Koa = require('koa')
 const views = require('koa-views')
+const mongoose = require('mongoose')
 const {resolve} = require('path')
+const {connect, initSchema} = require('./database/init')
 const app = new Koa()
+
+;(async () => {
+  await connect()
+  initSchema()
+  // require('./tasks/process')
+  require('./tasks/api')
+})()
+
 
 app.use(views(resolve(__dirname, './views'), {
   extension: 'pug'
